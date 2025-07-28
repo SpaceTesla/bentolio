@@ -16,10 +16,7 @@ export default function Deliverables() {
   };
 
   return (
-    <div
-      id="deliverables"
-      className="bg-primary relative col-span-4 row-span-8 flex flex-col gap-4 rounded-[20px] p-6"
-    >
+    <div className="bg-primary relative flex h-full flex-col gap-4 rounded-[20px] p-6">
       {deliverables.map((d, idx) => (
         <div
           key={d.projectName}
@@ -58,7 +55,7 @@ export default function Deliverables() {
           )}
         </div>
       ))}
-      <div className="heading absolute bottom-0 flex w-[calc(100%-3rem)] items-center justify-between pb-4">
+      <div className="heading bg-primary absolute bottom-0 flex w-[calc(100%-3rem)] items-center justify-between pb-4">
         <div className="text-4xl font-bold">Deliverables</div>
         <Link
           href="/"

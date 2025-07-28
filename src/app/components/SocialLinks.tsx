@@ -18,7 +18,7 @@ const iconMap = {
 
 export default function SocialLinks() {
   return (
-    <div className="flex h-full items-center justify-around">
+    <div className="flex h-full w-full items-center justify-around">
       {socialLinks.map((link) => {
         const Icon = iconMap[link.icon as keyof typeof iconMap];
         return (

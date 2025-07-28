@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeButton from './ThemeButton';
 import Link from 'next/link';
+import MobileMenu from '@/app/components/MobileMenu';
 
 const navLinks = [
   { name: 'Resume', href: '#' },
@@ -13,7 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary flex h-full w-full items-center justify-between rounded-[20px] px-4">
+    <nav className="bg-primary relative flex h-16 w-full items-center justify-between rounded-[20px] px-4">
       <Link
         href={'/'}
         className="hover:bg-secondary rounded-[8px] px-2 py-1 transition-colors duration-150"
@@ -24,7 +25,8 @@ export default function Navbar() {
         </div>
       </Link>
 
-      <ul className="flex gap-2 text-base font-medium">
+      {/* Desktop Menu */}
+      <ul className="hidden gap-2 text-base font-medium md:flex">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
@@ -36,7 +38,11 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <ThemeButton />
+
+      <div className="flex items-center gap-4">
+        <ThemeButton />
+        <MobileMenu links={navLinks} />
+      </div>
     </nav>
   );
 }
