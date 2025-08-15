@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <div className="bg-primary fixed top-0 left-0 h-[2px] w-full origin-left scale-x-0"></div>
-      <div className="grid h-screen grid-cols-12 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible max-lg:py-6">
+      <div className="grid h-screen grid-cols-12 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible">
         {/* Navbar Section */}
         <div className="col-span-full row-span-1">
           <Navbar />
@@ -85,7 +85,7 @@ export default function Home() {
         </div>
 
         {/* Contact Section - Mobile */}
-        <div className="col-span-full hidden max-lg:min-h-[18rem] max-md:mt-4 max-md:block">
+        <div className="col-span-full hidden max-lg:min-h-[18rem] max-md:block">
           <ContactSection />
         </div>
       </div>
