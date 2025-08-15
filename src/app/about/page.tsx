@@ -15,6 +15,7 @@ import {
   LuFigma,
 } from 'react-icons/lu';
 import Link from 'next/link';
+import { TechnologyLabels } from '../components/TechnologyLabels';
 
 export default function About() {
   return (
@@ -105,39 +106,13 @@ export default function About() {
             </div>
           </div>
 
-          {/* Experience Section */}
+          {/* Skills Section */}
           <div className="col-span-4 row-span-5 max-lg:col-span-6 max-lg:min-h-[20rem] max-md:col-span-full">
-            <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6">
-              <h2 className="mb-4 text-xl font-semibold max-lg:text-lg">
-                Experience
+            <div className="bg-primary hide-scrollbar relative h-full overflow-y-auto rounded-[20px] px-6 py-4">
+              <h2 className="mb-2 text-2xl font-semibold max-lg:text-lg">
+                Skills
               </h2>
-              <div className="space-y-4">
-                <div className="border-accent border-l-2 pl-4">
-                  <h3 className="text-sm font-medium">Senior Developer</h3>
-                  <p className="text-muted-foreground text-xs">
-                    2022 - Present
-                  </p>
-                  <p className="mt-1 text-xs">
-                    Building scalable web applications and mentoring junior
-                    developers.
-                  </p>
-                </div>
-                <div className="border-accent border-l-2 pl-4">
-                  <h3 className="text-sm font-medium">Full Stack Developer</h3>
-                  <p className="text-muted-foreground text-xs">2020 - 2022</p>
-                  <p className="mt-1 text-xs">
-                    Developed end-to-end solutions for various clients and
-                    startups.
-                  </p>
-                </div>
-                <div className="border-accent border-l-2 pl-4">
-                  <h3 className="text-sm font-medium">UI/UX Designer</h3>
-                  <p className="text-muted-foreground text-xs">2018 - 2020</p>
-                  <p className="mt-1 text-xs">
-                    Created user-centered designs and interactive prototypes.
-                  </p>
-                </div>
-              </div>
+              <TechnologyLabels />
             </div>
           </div>
 
