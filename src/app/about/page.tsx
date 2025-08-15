@@ -6,10 +6,13 @@ import {
   LuArrowUpRight,
   LuMapPin,
   LuBuilding,
-  LuCode,
+  LuCodeXml,
   LuPenTool,
   LuTrophy,
   LuFileText,
+  LuMapPinHouse,
+  LuSchool,
+  LuFigma,
 } from 'react-icons/lu';
 import Link from 'next/link';
 
@@ -26,15 +29,15 @@ export default function About() {
         {/* Main Content Grid */}
         <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
           {/* Personal Info Section */}
-          <div className="col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full">
-            <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6 max-lg:min-h-[18rem]">
+          <div className="max-xs:h-[28rem] col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full max-md:flex max-md:h-[12rem] max-sm:h-[26rem]">
+            <div className="bg-primary relative h-full w-full overflow-hidden rounded-[20px] p-6">
               <div className="absolute bottom-0 left-0 flex w-[80%] flex-col gap-1 pb-8 pl-6 max-lg:w-[90%] max-md:w-full max-md:pr-6">
-                <p className="text-sm leading-relaxed font-light tracking-wide max-lg:text-base max-md:text-sm">
+                <p className="text-sm leading-relaxed font-light tracking-wide">
                   I'm a <span className="font-semibold">builder at heart</span>,
                   passionate about turning ideas into real, usable digital
                   experiences.
                 </p>
-                <p className="text-sm leading-relaxed font-light tracking-wide max-lg:text-base max-md:text-sm">
+                <p className="text-sm leading-relaxed font-light tracking-wide">
                   I love working at the intersection of{' '}
                   <span className="font-semibold">clean code</span> and{' '}
                   <span className="font-semibold">thoughtful design</span>,
@@ -44,7 +47,7 @@ export default function About() {
                   <span className="font-semibold">solving problems </span>
                   that actually matter.
                 </p>
-                <p className="text-sm leading-relaxed font-light tracking-wide max-lg:text-base max-md:text-sm">
+                <p className="text-sm leading-relaxed font-light tracking-wide">
                   When I'm not shipping pixels or pushing commits, you'll
                   probably find me binging{' '}
                   <span className="font-semibold">anime</span>, diving into{' '}
@@ -60,42 +63,45 @@ export default function About() {
             </div>
           </div>
 
-          {/* Skills Section */}
-          <div className="col-span-3 row-span-4 max-lg:col-span-4 max-md:col-span-full">
+          <div className="col-span-3 h-full max-lg:hidden">
+            <div className="bg-primary relative flex h-full items-center overflow-hidden rounded-[20px] px-6 max-lg:min-h-[18rem] max-md:justify-center">
+              <h2 className="text-4xl font-bold max-lg:text-lg">About Me</h2>
+            </div>
+          </div>
+
+          {/* About Section */}
+          <div className="col-span-3 row-span-4 max-lg:col-span-4 max-lg:row-span-5 max-md:col-span-full">
             <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6 max-lg:min-h-[18rem]">
-              <h2 className="mb-4 text-xl font-semibold max-lg:text-lg">
-                Skills
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <LuCode className="text-accent h-5 w-5" />
-                  <div>
-                    <p className="text-sm font-medium">Frontend</p>
-                    <p className="text-muted-foreground text-xs">
-                      React, Next.js, TypeScript
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <LuCode className="text-accent h-5 w-5" />
-                  <div>
-                    <p className="text-sm font-medium">Backend</p>
-                    <p className="text-muted-foreground text-xs">
-                      Node.js, Python, Databases
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <LuPenTool className="text-accent h-5 w-5" />
-                  <div>
-                    <p className="text-sm font-medium">Design</p>
-                    <p className="text-muted-foreground text-xs">
-                      Figma, UI/UX, Prototyping
-                    </p>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-4">
+                <p className="border-accent flex items-center gap-4 border-l-2 pl-4">
+                  <span>
+                    <LuCodeXml className="text-accent h-4 w-4" />
+                  </span>
+                  <span>5+ years of coding</span>
+                </p>
+                <p className="border-accent flex items-center gap-4 border-l-2 pl-4">
+                  <span>
+                    <LuFigma className="text-accent h-4 w-4" />
+                  </span>
+                  <span>2+ years of design</span>
+                </p>
+                <p className="border-accent flex items-center gap-4 border-l-2 pl-4">
+                  <span>
+                    <LuTrophy className="text-accent h-4 w-4" />
+                  </span>
+                  <span>4x Hackathon Winner</span>
+                </p>
+                <p className="border-accent flex items-center gap-4 border-l-2 pl-4">
+                  <LuMapPinHouse className="text-accent h-4 w-4" />
+                  <span>Bengaluru, India</span>
+                </p>
+                <p className="border-accent flex items-center gap-4 border-l-2 pl-4">
+                  <span>
+                    <LuSchool className="text-accent h-4 w-4" />
+                  </span>
+                  <span>BE CSE, Dayananda Sagar College of Engineering</span>
+                </p>
               </div>
-              <BlobIcon className="text-accent absolute -right-8 -bottom-8 max-md:-right-6 max-md:-bottom-6" />
             </div>
           </div>
 
