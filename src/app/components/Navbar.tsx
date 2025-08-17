@@ -4,8 +4,8 @@ import Link from 'next/link';
 import MobileMenu from '@/app/components/MobileMenu';
 
 const navLinks = [
-  { name: 'Resume', href: '#' },
-  { name: 'About', href: '#' },
+  { name: 'Resume', href: '/resume.pdf' },
+  { name: 'About', href: '/about' },
   { name: 'Services', href: '#' },
   { name: 'Projects', href: '#' },
   { name: 'Deliverables', href: '#' },
@@ -14,12 +14,12 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary relative flex h-16 w-full items-center justify-between rounded-[20px] px-4">
+    <nav className="bg-primary relative flex h-full w-full items-center justify-between rounded-[20px] px-4 max-lg:h-16">
       <Link
         href={'/'}
         className="hover:bg-secondary rounded-[8px] px-2 py-1 transition-colors duration-150"
       >
-        <div className="text-2xl font-semibold">
+        <div className="text-xl font-semibold">
           <span className="font-bold">Shivansh</span>{' '}
           <span className="italic">Karan</span>
         </div>
