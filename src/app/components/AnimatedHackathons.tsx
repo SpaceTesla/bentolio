@@ -75,7 +75,8 @@ export default function AnimatedHackathons({
             {currentHackathon.hackathonName}
           </span>
           <span className="text-accent w-fit text-sm">
-            {currentHackathon.duration} - {currentHackathon.institution}
+            {currentHackathon.duration} {currentHackathon.type} -{' '}
+            {currentHackathon.institution}
           </span>
         </div>
         <LuArrowUpRight
