@@ -6,10 +6,10 @@ import MobileMenu from '@/app/components/MobileMenu';
 const navLinks = [
   { name: 'Resume', href: '/resume.pdf' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '#' },
-  { name: 'Projects', href: '#' },
-  { name: 'Deliverables', href: '#' },
-  { name: 'Contact me', href: '#' },
+  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Deliverables', href: '/deliverables' },
+  { name: 'Contact me', href: '/contact' },
 ];
 
 export default function Navbar() {
