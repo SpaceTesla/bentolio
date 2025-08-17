@@ -13,6 +13,7 @@ import {
   LuMapPinHouse,
   LuSchool,
   LuFigma,
+  LuSparkles,
 } from 'react-icons/lu';
 import Link from 'next/link';
 import { TechnologyLabels } from '../components/TechnologyLabels';
@@ -72,9 +73,14 @@ export default function About() {
             </div>
           </div>
 
+          {/* About Me Heading */}
           <div className="col-span-3 h-full max-lg:hidden">
             <div className="bg-primary relative flex h-full items-center overflow-hidden rounded-[20px] px-6 max-lg:min-h-[18rem] max-md:justify-center">
               <h2 className="text-4xl font-bold max-lg:text-lg">About Me</h2>
+              <LuSparkles
+                className="text-accent absolute -top-4 -right-4 text-6xl"
+                strokeWidth={1}
+              />
             </div>
           </div>
 
