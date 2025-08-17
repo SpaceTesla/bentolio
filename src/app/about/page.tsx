@@ -16,7 +16,9 @@ import {
 } from 'react-icons/lu';
 import Link from 'next/link';
 import { TechnologyLabels } from '../components/TechnologyLabels';
+import ExperienceSection from '../components/ExperienceSection';
 import hackathons from '@/data/hackathons';
+import { experienceData } from '@/data/experience';
 import AnimatedHackathons from '../components/AnimatedHackathons';
 
 export default function About() {
@@ -132,108 +134,38 @@ export default function About() {
 
         {/* Right Side Content */}
         <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
-          {/* Achievements Section */}
-          <div className="col-span-4 row-span-4 max-lg:col-span-full max-lg:min-h-[18rem]">
+          {/* Experience Section */}
+          <div className="col-span-4 row-span-7 max-lg:col-span-full max-lg:min-h-[18rem]">
             <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6">
-              <h2 className="mb-4 text-xl font-semibold max-lg:text-lg">
-                Achievements
+              <h2 className="mb-4 text-2xl font-semibold max-lg:text-lg">
+                Experience
               </h2>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <LuTrophy className="text-accent h-5 w-5" />
-                  <div>
-                    <p className="text-sm font-medium">
-                      50+ Projects Completed
-                    </p>
-                    <p className="text-muted-foreground text-xs">
-                      Successfully delivered across various domains
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <LuTrophy className="text-accent h-5 w-5" />
-                  <div>
-                    <p className="text-sm font-medium">5+ Years Experience</p>
-                    <p className="text-muted-foreground text-xs">
-                      In web development and design
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <LuTrophy className="text-accent h-5 w-5" />
-                  <div>
-                    <p className="text-sm font-medium">20+ Happy Clients</p>
-                    <p className="text-muted-foreground text-xs">
-                      Satisfied with delivered solutions
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <ExperienceSection experience={experienceData} />
             </div>
           </div>
 
-          {/* Education Section */}
-          <div className="col-span-4 row-span-3 max-lg:col-span-full max-lg:min-h-[15rem]">
-            <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6">
-              <h2 className="mb-4 text-xl font-semibold max-lg:text-lg">
-                Education
-              </h2>
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-sm font-medium">
-                    Bachelor's in Computer Science
-                  </h3>
-                  <p className="text-muted-foreground text-xs">
-                    University of Technology
-                  </p>
-                  <p className="text-muted-foreground text-xs">2016 - 2020</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-medium">
-                    UI/UX Design Certification
-                  </h3>
-                  <p className="text-muted-foreground text-xs">
-                    Design Institute
-                  </p>
-                  <p className="text-muted-foreground text-xs">2019</p>
-                </div>
-              </div>
-            </div>
+          {/* Resume Button */}
+          <div className="bg-accent relative col-span-4 row-span-1 rounded-[20px] max-lg:col-span-full max-lg:min-h-[5rem]">
+            <Link
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-full items-center px-6"
+            >
+              <span className="text-3xl font-semibold">View Resume</span>
+              <LuArrowUpRight
+                className={
+                  'hover:text-accent absolute right-2 text-4xl transition-all duration-300 max-lg:text-4xl max-md:text-3xl'
+                }
+                strokeWidth={1}
+              />
+            </Link>
           </div>
 
           {/* Social Links */}
-          <div className="col-span-4 row-span-2 max-lg:col-span-full max-lg:min-h-[5rem]">
+          <div className="col-span-4 row-span-1 max-lg:col-span-full max-lg:min-h-[5rem]">
             <div className="bg-primary flex min-h-full items-center justify-center rounded-[20px]">
               <SocialLinks />
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Section - Mobile */}
-        <div className="col-span-full hidden max-lg:min-h-[18rem] max-md:mt-4 max-md:block">
-          <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6">
-            <h2 className="mb-4 text-xl font-semibold max-lg:text-lg">
-              Get In Touch
-            </h2>
-            <p className="mb-6 text-sm leading-relaxed">
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your visions.
-            </p>
-            <div className="space-y-3">
-              <Link
-                href="/contact"
-                className="hover:text-accent flex items-center gap-2 text-sm transition-colors duration-300"
-              >
-                <span>Let's work together</span>
-                <LuArrowUpRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/resume.pdf"
-                className="hover:text-accent flex items-center gap-2 text-sm transition-colors duration-300"
-              >
-                <LuFileText className="h-4 w-4" />
-                <span>Download Resume</span>
-              </Link>
             </div>
           </div>
         </div>
