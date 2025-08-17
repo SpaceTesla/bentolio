@@ -20,34 +20,48 @@ export default function MobileMenu({ links }: MobileMenuProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile/Tablet Menu Button - Visible on screens smaller than lg */}
       <button
-        className="hover:bg-secondary rounded-[8px] p-2 text-2xl transition-colors duration-150 md:hidden"
+        className="hover:bg-secondary rounded-[8px] p-2 text-2xl transition-colors duration-150 lg:hidden"
         onClick={toggleMenu}
         aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
       >
         {isMenuOpen ? <FiX /> : <FiMenu />}
       </button>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu Overlay */}
       {isMenuOpen && (
-        <div className="bg-primary absolute top-full right-0 left-0 mt-2 rounded-[20px] p-4 shadow-lg md:hidden">
-          <ul className="flex flex-col gap-2">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="hover:bg-secondary block rounded-[8px] px-4 py-2 transition-colors duration-150"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 bg-black/20 lg:hidden"
+            onClick={closeMenu}
+          />
+
+          {/* Menu Content */}
+          <div className="bg-primary absolute top-full right-0 left-0 z-50 mt-2 rounded-[20px] p-4 shadow-lg lg:hidden">
+            <ul className="flex flex-col gap-2">
+              {links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="hover:bg-secondary block rounded-[8px] px-4 py-2 transition-colors duration-150"
+                    onClick={closeMenu}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
       )}
     </>
   );

@@ -14,7 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary relative flex h-full w-full items-center justify-between rounded-[20px] px-4 max-lg:h-16">
+    <nav className="bg-primary relative z-50 flex h-16 w-full items-center justify-between rounded-[20px] px-4">
       <Link
         href={'/'}
         className="hover:bg-secondary rounded-[8px] px-2 py-1 transition-colors duration-150"
@@ -25,8 +25,8 @@ export default function Navbar() {
         </div>
       </Link>
 
-      {/* Desktop Menu */}
-      <ul className="hidden gap-2 text-base font-medium md:flex">
+      {/* Desktop Menu - Hidden on mobile and tablet */}
+      <ul className="hidden gap-2 text-base font-medium lg:flex">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
@@ -41,6 +41,7 @@ export default function Navbar() {
 
       <div className="flex items-center gap-4">
         <ThemeButton />
+        {/* Mobile and Tablet Menu - Visible on screens smaller than lg */}
         <MobileMenu links={navLinks} />
       </div>
     </nav>
