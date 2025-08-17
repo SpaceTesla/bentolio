@@ -16,12 +16,14 @@ import {
 } from 'react-icons/lu';
 import Link from 'next/link';
 import { TechnologyLabels } from '../components/TechnologyLabels';
+import hackathons from '@/data/hackathons';
+import AnimatedHackathons from '../components/AnimatedHackathons';
 
 export default function About() {
   return (
     <main className="w-full">
       <div className="bg-primary fixed top-0 left-0 h-[2px] w-full origin-left scale-x-0"></div>
-      <div className="grid h-screen grid-cols-12 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible max-lg:py-6">
+      <div className="grid h-screen grid-cols-12 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible">
         {/* Navbar Section */}
         <div className="col-span-full row-span-1">
           <Navbar />
@@ -116,32 +118,14 @@ export default function About() {
             </div>
           </div>
 
-          {/* Contact Section */}
-          <div className="col-span-4 row-span-4 max-lg:col-span-6 max-lg:min-h-[18rem] max-md:hidden">
-            <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6">
-              <h2 className="mb-4 text-xl font-semibold max-lg:text-lg">
-                Get In Touch
+          {/* Hackathons Section */}
+          <div className="relative col-span-4 row-span-5 max-lg:col-span-6 max-lg:h-[20rem] max-md:col-span-full max-md:max-h-[18rem]">
+            <div className="bg-primary relative flex h-full overflow-hidden rounded-[20px] p-4">
+              <h2 className="absolute top-1/2 -right-[1.5em] -translate-y-1/2 -rotate-90 text-2xl font-semibold max-lg:text-lg">
+                Hackathons
               </h2>
-              <p className="mb-6 text-sm leading-relaxed">
-                I'm always open to discussing new projects, creative ideas, or
-                opportunities to be part of your visions.
-              </p>
-              <div className="space-y-3">
-                <Link
-                  href="/contact"
-                  className="hover:text-accent flex items-center gap-2 text-sm transition-colors duration-300"
-                >
-                  <span>Let's work together</span>
-                  <LuArrowUpRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="/resume.pdf"
-                  className="hover:text-accent flex items-center gap-2 text-sm transition-colors duration-300"
-                >
-                  <LuFileText className="h-4 w-4" />
-                  <span>Download Resume</span>
-                </Link>
-              </div>
+
+              <AnimatedHackathons hackathons={hackathons} />
             </div>
           </div>
         </div>
