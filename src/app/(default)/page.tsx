@@ -1,10 +1,10 @@
-import BlobIcon from './components/BlobIcon';
-import Navbar from './components/Navbar';
-import StarIcon from './components/StarIcon';
+import BlobIcon from '../components/BlobIcon';
+import Navbar from '../components/Navbar';
+import StarIcon from '../components/StarIcon';
 import Image from 'next/image';
-import SocialLinks from './components/SocialLinks';
-import Deliverables from './components/Deliverables';
-import ContactSection from './components/ContactSection';
+import SocialLinks from '../components/SocialLinks';
+import Deliverables from '../components/Deliverables';
+import ContactSection from '../components/ContactSection';
 
 export default function Home() {
   return (
