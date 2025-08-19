@@ -20,7 +20,7 @@ const deliverables: Deliverable[] = [
       { logo: LuGithub, link: 'https://github.com/SpaceTesla/buttr' },
     ],
     description:
-      'A brand website for a sustainable paper manufacturing and retail company',
+      'Buttr Paper is a sustainable paper brand that creates ultra-smooth, tree-free paper by recycling waste like cigarette butts, helping save water, prevent deforestation, and cut carbon emissions. The website highlights the brand’s mission, product benefits, and impact in a minimal, modern, and eco-friendly way.',
     images: ['/deliverables/buttr/home.png'],
     techStack: [
       { name: 'Next.js', logo: SiNextdotjs },
@@ -45,7 +45,7 @@ const deliverables: Deliverable[] = [
       { logo: LuGithub, link: 'https://github.com/SpaceTesla/gimni' },
     ],
     description:
-      'A brand website for a sustainable paper manufacturing and retail company',
+      'Founded during the Bengali New Year in April 2021 in Horamavu, Bengaluru, Gimni’s Kitchen brings the warmth of authentic home-style Bengali cuisine to food lovers, with early success like serving 400 patrons during Durga Puja and fueling a 130% growth in just 45 days Their website showcases tasty traditional dishes, takeaway and catering options, and invites foodies to “experience the taste of Bengal” simple, soulful, and inviting .',
     images: ['/deliverables/gimni/home.png'],
     techStack: [
       { name: 'Next.js', logo: SiNextdotjs },
@@ -71,7 +71,7 @@ const deliverables: Deliverable[] = [
       { logo: LuGithub, link: 'https://github.com/SpaceTesla/code-efforts' },
     ],
     description:
-      'A brand website for a sustainable paper manufacturing and retail company',
+      'Code Efforts is a social enterprise on a mission to turn one of India’s biggest eco-nuisances cigarette butt waste into livelihood-supporting handcrafted products, empowering rural women artisans and promoting a circular economy. Their website highlights this eco-conscious brand story, displays a range of recycled lifestyle goods, and offers partnerships and services that invite individuals globally to contribute to sustainable waste solutions',
     images: ['/deliverables/codeefforts/home.jpg'],
     techStack: [
       { name: 'Next.js', logo: SiNextdotjs },
