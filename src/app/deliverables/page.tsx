@@ -47,7 +47,7 @@ export default function About() {
         {/* Main Content Grid */}
         <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
           {/* Image Section (from data/deliverables) */}
-          <div className="relative col-span-6 row-span-5 overflow-hidden max-lg:col-span-8 max-md:col-span-full max-md:flex max-md:h-[12rem] max-sm:h-[26rem]">
+          <div className="relative col-span-6 row-span-5 overflow-hidden max-lg:col-span-8 max-md:col-span-full max-md:flex max-md:h-[12rem]">
             <div className="bg-primary hide-scrollbar relative flex h-full w-full flex-col items-center justify-center overflow-y-auto rounded-[20px] p-4">
               <Image
                 src={current?.images?.[0] || '/projects/buttr.png'}
