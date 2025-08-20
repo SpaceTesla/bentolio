@@ -73,7 +73,9 @@ export default function Home() {
         <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
           {/* Deliverables Section */}
           <div className="col-span-4 row-span-8 max-lg:col-span-full max-lg:min-h-[25rem]">
-            <Deliverables />
+            <div className="bg-primary hide-scrollbar relative flex h-full flex-col overflow-y-auto rounded-[20px] p-6">
+              <Deliverables />
+            </div>
           </div>
 
           {/* Social Links */}

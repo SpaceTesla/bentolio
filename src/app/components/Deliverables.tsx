@@ -34,7 +34,23 @@ export default function Deliverables({
   };
 
   return (
-    <div className="bg-primary relative flex h-full flex-col gap-6 rounded-[20px]">
+    <div className="bg-primary hide-scrollbar relative flex h-full flex-col gap-6 overflow-y-auto">
+      {showFooterHeading && (
+        <div className="heading bg-primary flex items-center justify-between pb-4">
+          <Link
+            href="/deliverables"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="group flex w-full items-center justify-between"
+          >
+            <div className="group-hover:text-accent text-4xl font-bold transition-colors">
+              Deliverables
+            </div>
+            <LuArrowUpRight className="text-foreground group-hover:text-accent h-10 w-10 transition-colors" />
+          </Link>
+        </div>
+      )}
       {deliverables.map((d) => (
         <div
           key={d.projectName}
@@ -73,19 +89,6 @@ export default function Deliverables({
           )}
         </div>
       ))}
-      {showFooterHeading && (
-        <div className="heading bg-primary absolute bottom-0 flex w-[calc(100%-3rem)] items-center justify-between pb-4">
-          <div className="text-4xl font-bold">Deliverables</div>
-          <Link
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <LuArrowUpRight className="text-foreground hover:text-accent h-10 w-10 transition-colors" />
-          </Link>
-        </div>
-      )}
     </div>
   );
 }
