@@ -12,9 +12,7 @@ export default function ExperienceSection({
       {experience.map((job, index) => (
         <div key={index}>
           <div className="border-accent mb-4 border-l-2 pl-4">
-            <h3 className="text-md mb-2 font-bold text-gray-800">
-              {job.title}
-            </h3>
+            <h3 className="text-md mb-2 font-bold">{job.title}</h3>
             <div className="mb-3 flex items-center justify-between">
               <span className="text-accent font-bold italic">
                 {job.company}
@@ -23,9 +21,7 @@ export default function ExperienceSection({
                 {job.startDate} - {job.endDate}
               </span>
             </div>
-            <p className="mb-3 text-sm leading-relaxed text-gray-700">
-              {job.description}
-            </p>
+            <p className="mb-3 text-sm leading-relaxed">{job.description}</p>
             {job.projects && (
               <div className="flex flex-wrap gap-2">
                 {job.projects.map((project, projectIndex) => (
