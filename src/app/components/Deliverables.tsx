@@ -3,21 +3,39 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuArrowUpRight } from 'react-icons/lu';
-import { useState } from 'react';
-import deliverables from '@/data/Deliverables';
+import { useEffect, useState } from 'react';
+import deliverables from '@/data/deliverables';
 
-export default function Deliverables() {
+interface DeliverablesProps {
+  onSelect?: (projectName: string) => void;
+  showFooterHeading?: boolean;
+  selectedProjectName?: string | null;
+}
+
+export default function Deliverables({
+  onSelect,
+  showFooterHeading = true,
+  selectedProjectName = null,
+}: DeliverablesProps) {
   const [expandedProject, setExpandedProject] = useState<string | null>(
-    deliverables[0]?.projectName || null,
+    selectedProjectName ?? deliverables[0]?.projectName ?? null,
   );
 
+  useEffect(() => {
+    if (selectedProjectName !== null && selectedProjectName !== undefined) {
+      setExpandedProject(selectedProjectName);
+    }
+  }, [selectedProjectName]);
+
   const toggleProject = (projectName: string) => {
-    setExpandedProject(expandedProject === projectName ? null : projectName);
+    const next = expandedProject === projectName ? null : projectName;
+    setExpandedProject(next);
+    if (next) onSelect?.(projectName);
   };
 
   return (
-    <div className="bg-primary relative flex h-full flex-col gap-4 rounded-[20px] p-6">
-      {deliverables.map((d, idx) => (
+    <div className="bg-primary relative flex h-full flex-col gap-6 rounded-[20px]">
+      {deliverables.map((d) => (
         <div
           key={d.projectName}
           className="bg-primary border-accent mb-2 flex cursor-pointer flex-col gap-4 rounded-xl border-b-2 pb-4"
@@ -39,7 +57,7 @@ export default function Deliverables() {
           {d.images[0] && (
             <div
               className={`border-secondary/30 relative mx-auto w-full max-w-[360px] overflow-hidden rounded-[16px] border transition-all duration-300 ${
-                expandedProject === d.projectName
+                selectedProjectName !== d.projectName
                   ? 'h-48 opacity-100'
                   : 'h-0 opacity-0'
               }`}
@@ -55,17 +73,19 @@ export default function Deliverables() {
           )}
         </div>
       ))}
-      <div className="heading bg-primary absolute bottom-0 flex w-[calc(100%-3rem)] items-center justify-between pb-4">
-        <div className="text-4xl font-bold">Deliverables</div>
-        <Link
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <LuArrowUpRight className="text-foreground hover:text-accent h-10 w-10 transition-colors" />
-        </Link>
-      </div>
+      {showFooterHeading && (
+        <div className="heading bg-primary absolute bottom-0 flex w-[calc(100%-3rem)] items-center justify-between pb-4">
+          <div className="text-4xl font-bold">Deliverables</div>
+          <Link
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <LuArrowUpRight className="text-foreground hover:text-accent h-10 w-10 transition-colors" />
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

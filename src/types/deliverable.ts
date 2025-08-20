@@ -9,6 +9,7 @@ export interface TechStackItem {
 export interface Link {
   logo: ComponentType<SVGProps<SVGSVGElement>>; // React component for the icon
   link: string;
+  name: string;
 }
 
 export interface Client {
