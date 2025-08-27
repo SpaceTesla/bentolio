@@ -1,0 +1,91 @@
+# LLMs.txt for shivanshkaran.tech
+
+## Website Overview
+This is the personal portfolio website of Shivansh Karan, a Full Stack Developer and Software Engineer based in Bangalore, India. The website showcases professional experience, projects, skills, and contact information.
+
+## Site Structure
+- **Home Page** (`/`): Main landing page with introduction and overview
+- **About Page** (`/about`): Personal background, skills, experience, and hackathon achievements
+- **Projects Page** (`/projects`): Portfolio of web applications, Chrome extensions, and scalable systems
+- **Deliverables Page** (`/deliverables`): Client work portfolio with testimonials and ratings
+- **Contact Page** (`/contact`): Contact form and professional contact information
+
+## Key Information
+
+### Personal Details
+- **Name**: Shivansh Karan
+- **Location**: Bangalore, India
+- **Profession**: Full Stack Developer, Software Engineer, DevOps Engineer
+- **Experience**: 5+ years of coding, 2+ years of design experience
+- **Education**: BE CSE, Dayananda Sagar College of Engineering
+- **Achievements**: 4x Hackathon Winner (DevHack, Hack-o-Rama, Pragathi, Sentinal Hack)
+
+### Technical Skills
+- **Frontend**: Next.js, React.js, TypeScript, JavaScript, TailwindCSS
+- **Backend**: Python (FastAPI, Flask), Node.js, Express.js
+- **DevOps**: AWS, Docker, Kubernetes, CI/CD, Microservices
+- **Databases**: PostgreSQL, Redis
+- **Tools**: Git, GitHub Actions, Figma, UI/UX Design
+
+### Notable Projects
+- **Mivro**: Web application project
+- **JuRIDEX**: Legal technology platform
+- **PayZee**: Payment solution
+- **Orbis**: Business application
+- **Chrome Extensions**: Various browser extensions
+- **Internship Portal**: Educational platform
+
+### Professional Services
+- Full Stack Web Development
+- Software Engineering & System Design
+- Technical Consulting
+- Project Collaboration
+- Freelance Development
+- Startup Development Support
+
+## Content Guidelines for LLMs
+
+### What to Extract
+- Professional experience and skills
+- Project portfolio and technologies used
+- Client testimonials and ratings
+- Contact information and availability
+- Technical expertise and specializations
+
+### What to Avoid
+- Personal opinions or subjective content
+- Sensitive client information
+- Unverified claims or achievements
+- Temporary or outdated information
+
+## Navigation Patterns
+- Use the navbar for primary navigation
+- Projects and deliverables have interactive selection interfaces
+- Contact form is available for direct communication
+- Social media links are provided for additional engagement
+
+## Update Frequency
+- **Home/Projects**: Updated weekly
+- **About/Contact**: Updated monthly
+- **Deliverables**: Updated as new projects complete
+- **Skills/Experience**: Updated quarterly
+
+## Contact Information
+- **Portfolio**: https://shivanshkaran.tech
+- **GitHub**: https://github.com/shivanshkaran
+- **LinkedIn**: https://linkedin.com/in/shivanshkaran
+- **Twitter**: https://twitter.com/shivanshkaran
+- **Services**: https://anthrapi.com
+
+## AI-Friendly Features
+- Structured data (JSON-LD) for all pages
+- Semantic HTML markup
+- Clear content hierarchy
+- Descriptive alt text for images
+- Consistent navigation patterns
+
+## Purpose
+This website serves as a professional portfolio for potential clients, employers, and collaborators to understand Shivansh Karan's technical capabilities, project experience, and professional services in web development and software engineering.
+
+---
+*This llms.txt file is designed to help AI models better understand and navigate this portfolio website. For the most current information, please refer to the actual website content.*
