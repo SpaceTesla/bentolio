@@ -13,9 +13,9 @@ export default function ThemeButton() {
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (
-        <LuSun className="h-5 w-5" />
+        <LuSun className="h-5 w-5" aria-hidden="true" />
       ) : (
-        <LuMoon className="h-5 w-5" />
+        <LuMoon className="h-5 w-5" aria-hidden="true" />
       )}
     </button>
   );

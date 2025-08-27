@@ -18,7 +18,11 @@ const iconMap = {
 
 export default function SocialLinks() {
   return (
-    <div className="flex h-full w-full items-center justify-around">
+    <nav
+      className="flex h-full w-full items-center justify-around"
+      role="navigation"
+      aria-label="Social Media Links"
+    >
       {socialLinks.map((link) => {
         const Icon = iconMap[link.icon as keyof typeof iconMap];
         return (
@@ -28,11 +32,12 @@ export default function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground/60 hover:bg-secondary hover:text-foreground rounded-[8px] p-2 transition-colors duration-300"
+            aria-label={`Visit ${link.name} profile`}
           >
-            <Icon className="h-6 w-6" />
+            <Icon className="h-6 w-6" aria-hidden="true" />
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

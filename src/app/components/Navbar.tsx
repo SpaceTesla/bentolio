@@ -13,10 +13,14 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary relative z-50 flex h-16 w-full items-center justify-between rounded-[20px] px-4">
+    <nav
+      className="bg-primary relative z-50 flex h-16 w-full items-center justify-between rounded-[20px] px-4"
+      aria-label="Main Navigation"
+    >
       <Link
         href={'/'}
         className="hover:bg-secondary rounded-[8px] px-2 py-1 transition-colors duration-150"
+        aria-label="Shivansh Karan - Home"
       >
         <div className="text-xl font-semibold">
           <span className="font-bold">Shivansh</span>{' '}
@@ -25,12 +29,17 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu - Hidden on mobile and tablet */}
-      <ul className="hidden gap-2 text-base font-medium lg:flex">
+      <ul
+        className="hidden gap-2 text-base font-medium lg:flex"
+        role="menubar"
+        aria-label="Main Navigation Menu"
+      >
         {navLinks.map((link) => (
-          <li key={link.name}>
+          <li key={link.name} role="none">
             <Link
               href={link.href}
               className="hover:bg-secondary rounded-[8px] px-4 py-2 transition-colors duration-150"
+              role="menuitem"
             >
               {link.name}
             </Link>
@@ -38,7 +47,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4" aria-label="Navigation Controls">
         <ThemeButton />
         {/* Mobile and Tablet Menu - Visible on screens smaller than lg */}
         <MobileMenu links={navLinks} />

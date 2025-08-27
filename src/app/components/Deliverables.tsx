@@ -33,62 +33,88 @@ export default function Deliverables({
     if (next) onSelect?.(projectName);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent, projectName: string) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleProject(projectName);
+    }
+  };
+
   return (
-    <div className="bg-primary hide-scrollbar relative flex h-full flex-col gap-6 overflow-y-auto">
+    <div
+      className="bg-primary hide-scrollbar relative flex h-full flex-col gap-6 overflow-y-auto"
+      role="region"
+      aria-label="Client Deliverables"
+    >
       {showFooterHeading && (
-        <div className="heading bg-primary flex items-center justify-between pb-4">
+        <header className="heading bg-primary flex items-center justify-between pb-4">
           <Link
             href="/deliverables"
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             className="group flex w-full items-center justify-between"
+            aria-label="View all deliverables"
           >
-            <div className="group-hover:text-accent text-4xl font-bold transition-colors">
+            <h2 className="group-hover:text-accent text-4xl font-bold transition-colors">
               Deliverables
-            </div>
-            <LuArrowUpRight className="text-foreground group-hover:text-accent h-10 w-10 transition-colors" />
+            </h2>
+            <LuArrowUpRight
+              className="text-foreground group-hover:text-accent h-10 w-10 transition-colors"
+              aria-hidden="true"
+            />
           </Link>
-        </div>
+        </header>
       )}
-      {deliverables.map((d) => (
-        <div
-          key={d.projectName}
-          className="bg-primary border-accent mb-2 flex cursor-pointer flex-col gap-4 rounded-xl border-b-2 pb-4"
-          onClick={() => toggleProject(d.projectName)}
-        >
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-semibold">{d.projectName}</div>
-            {d.links[0] && (
-              <Link
-                href={d.links[0].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <LuArrowUpRight className="text-foreground hover:text-accent h-7 w-7 transition-colors" />
-              </Link>
-            )}
-          </div>
-          {d.images[0] && (
-            <div
-              className={`border-secondary/30 relative mx-auto w-full max-w-[360px] overflow-hidden rounded-[16px] border transition-all duration-300 ${
-                selectedProjectName !== d.projectName
-                  ? 'h-48 opacity-100'
-                  : 'h-0 opacity-0'
-              }`}
-            >
-              <Image
-                src={d.images[0]}
-                alt={d.projectName}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
+      <div role="list" aria-label="Client Project Deliverables">
+        {deliverables.map((d) => (
+          <article
+            key={d.projectName}
+            className="bg-primary border-accent mb-2 flex cursor-pointer flex-col gap-4 rounded-xl border-b-2 pb-4"
+            onClick={() => toggleProject(d.projectName)}
+            onKeyDown={(e) => handleKeyDown(e, d.projectName)}
+            role="listitem"
+            tabIndex={0}
+            aria-label={`Project: ${d.projectName}. Click to expand details.`}
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="text-2xl font-semibold">{d.projectName}</h3>
+              {d.links[0] && (
+                <Link
+                  href={d.links[0].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label={`View ${d.projectName} project`}
+                >
+                  <LuArrowUpRight
+                    className="text-foreground hover:text-accent h-7 w-7 transition-colors"
+                    aria-hidden="true"
+                  />
+                </Link>
+              )}
             </div>
-          )}
-        </div>
-      ))}
+            {d.images[0] && (
+              <div
+                className={`border-secondary/30 relative mx-auto w-full max-w-[360px] overflow-hidden rounded-[16px] border transition-all duration-300 ${
+                  selectedProjectName !== d.projectName
+                    ? 'h-48 opacity-100'
+                    : 'h-0 opacity-0'
+                }`}
+                aria-hidden={selectedProjectName !== d.projectName}
+              >
+                <Image
+                  src={d.images[0]}
+                  alt={`${d.projectName} project screenshot`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
