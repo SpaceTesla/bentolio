@@ -15,6 +15,11 @@ export default function ContactPage() {
           <Navbar />
         </div>
 
+        {/* Mobile Header */}
+        <div className="col-span-full h-16 lg:hidden">
+          <ContactHeader />
+        </div>
+
         {/* Left Grid (Form) */}
         <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 lg:grid-cols-subgrid">
           <div className="col-span-8 row-span-9 max-lg:col-span-full max-lg:min-h-[24rem]">
@@ -24,7 +29,7 @@ export default function ContactPage() {
 
         {/* Right Grid (Header + Info + FAQ) */}
         <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 lg:grid-cols-subgrid">
-          <div className="col-span-4 row-span-1 max-lg:col-span-full">
+          <div className="col-span-4 row-span-1 max-lg:hidden">
             <ContactHeader />
           </div>
           <div className="col-span-4 row-span-4 max-lg:col-span-full">
