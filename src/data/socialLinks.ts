@@ -16,10 +16,9 @@ export const socialLinks: SocialLink[] = [
     icon: 'linkedin',
   },
   {
-    name: 'Twitter',
-    // TODO: Create a twitter account
-    url: 'https://twitter.com/',
-    icon: 'twitter',
+    name: 'X',
+    url: 'https://x.com/ShivanshKaran',
+    icon: 'x',
   },
   {
     name: 'Instagram',

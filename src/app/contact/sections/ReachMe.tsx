@@ -1,4 +1,5 @@
 import { LuMail, LuLinkedin, LuGithub, LuInstagram } from 'react-icons/lu';
+import { RiTwitterXLine } from 'react-icons/ri';
 
 const items = [
   {
@@ -20,6 +21,11 @@ const items = [
     icon: LuInstagram,
     label: '@shivanshk.dev',
     href: 'https://instagram.com/shivanshk.dev',
+  },
+  {
+    icon: RiTwitterXLine,
+    label: '@ShivanshKaran',
+    href: 'https://x.com/ShivanshKaran',
   },
 ];
 

@@ -10,7 +10,7 @@ import Link from 'next/link';
 const iconMap = {
   github: LuGithub,
   linkedin: LuLinkedin,
-  twitter: RiTwitterXLine,
+  x: RiTwitterXLine,
   instagram: LuInstagram,
   figma: FaFigma,
   medium: FaMedium,
