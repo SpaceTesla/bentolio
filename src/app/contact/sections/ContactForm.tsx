@@ -107,7 +107,7 @@ export default function ContactForm() {
           <input
             id="phone"
             className="bg-secondary/30 mt-2 w-full rounded-[12px] p-4 outline-none"
-            placeholder="+91 98765 43210"
+            placeholder="+919876543210"
             aria-invalid={errors.phone ? 'true' : 'false'}
             aria-describedby={errors.phone ? 'phone-error' : undefined}
             {...register('phone')}
