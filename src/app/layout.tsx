@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     siteName: 'Shivansh Karan Portfolio',
     images: [
       {
-        url: '/myself.jpg',
+        url: '/avatar.png',
         width: 1200,
         height: 630,
         alt: 'Shivansh Karan - Full Stack Developer',
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
       'Shivansh Karan - Full Stack Developer & Software Engineer | Bangalore',
     description:
       'Shivansh Karan is a Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies.',
-    images: ['/myself.jpg'],
+    images: ['/avatar.png'],
     creator: '@shivanshkaran',
   },
   robots: {
@@ -136,7 +136,7 @@ export default function RootLayout({
     <html lang="en" className={nunito.className}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/myself.jpg" />
+        <link rel="apple-touch-icon" href="/avatar.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
