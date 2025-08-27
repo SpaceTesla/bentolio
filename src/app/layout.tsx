@@ -12,64 +12,27 @@ export const metadata: Metadata = {
   title: {
     default:
       'Shivansh Karan - Full Stack Developer & Software Engineer | Bangalore',
-    template: '%s | Shivansh Karan - Full Stack Developer',
+    template: '%s | Shivansh Karan Portfolio',
   },
   description:
     'Shivansh Karan is a Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies. View portfolio of web apps, Chrome extensions, and scalable systems.',
   keywords: [
     'Shivansh Karan',
-    'Software Engineer',
-    'Full Stack Developer',
-    'Web Developer',
-    'DevOps Engineer',
-    'Cloud Engineer',
-    'Frontend Developer',
-    'Backend Developer',
-    'JavaScript Developer',
-    'Python Developer',
-    'Next.js',
-    'React.js',
-    'TailwindCSS',
-    'TypeScript',
-    'JavaScript',
-    'Node.js',
-    'Express.js',
-    'FastAPI',
-    'Flask',
-    'PostgreSQL',
-    'Redis',
-    'Kafka',
-    'RabbitMQ',
-    'AWS',
-    'Cloudflare R2',
-    'Docker',
-    'Kubernetes',
-    'Microservices',
-    'REST API',
-    'GraphQL',
-    'CI/CD',
-    'DevOps Automation',
-    'Chrome Extension Developer',
-    'Mivro',
-    'JuRIDEX',
-    'PayZee',
-    'Orbis',
-    'Anthrapi CTO',
-    'Internship Portal',
-    'Clean Code',
-    'Scalable Architecture',
-    'System Design',
-    'AI Agents',
-    'Open Source',
-    'API Development',
-    'Automation Tools',
-    'Cloud Infrastructure',
-    'Web App Development',
-    'Bangalore Software Engineer',
-    'Full Stack Developer India',
-    'Cloud DevOps Engineer Portfolio',
-    'Python Backend Developer',
+    'SpaceTesla',
+    'Full Stack Developer Bangalore',
+    'Software Engineer Portfolio',
     'Next.js Developer Portfolio',
+    'React.js Developer',
+    'DevOps Engineer India',
+    'Cloud Engineer Portfolio',
+    'Chrome Extension Developer',
+    'Node.js Backend Developer',
+    'Python Backend Developer',
+    'Web Developer Bangalore',
+    'Cloud Infrastructure Engineer',
+    'Microservices Developer',
+    'AWS Developer India',
+    'Full Stack Portfolio',
   ],
   authors: [{ name: 'Shivansh Karan' }],
   creator: 'Shivansh Karan',
@@ -150,6 +113,35 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
+
+        {/* JSON-LD Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Shivansh Karan',
+              jobTitle: 'Full Stack Developer',
+              url: 'https://shivanshkaran.tech',
+              description:
+                'Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies.',
+              sameAs: [
+                'https://github.com/spacetesla',
+                'https://linkedin.com/in/shivanshkaran',
+              ],
+              knowsAbout: [
+                'Next.js',
+                'React.js',
+                'Python',
+                'DevOps',
+                'Cloud Infrastructure',
+                'Microservices',
+                'Chrome Extensions',
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
