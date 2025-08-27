@@ -1,6 +1,7 @@
 'use client';
 
 import Select from '@/app/components/Select';
+import axios from 'axios';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import {
@@ -10,6 +11,12 @@ import {
 import { LuSend } from 'react-icons/lu';
 
 export default function ContactForm() {
+  const [serverMessage, setServerMessage] = (
+    require('react') as typeof import('react')
+  ).useState<string | null>(null);
+  const [serverError, setServerError] = (
+    require('react') as typeof import('react')
+  ).useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -31,9 +38,23 @@ export default function ContactForm() {
   const subject = watch('subject');
 
   async function onSubmit(values: ContactFormValues) {
-    // TODO: hook up to API/email service
-    await new Promise((r) => setTimeout(r, 600));
-    reset();
+    setServerMessage(null);
+    setServerError(null);
+    try {
+      await axios.post('/api/contact', values, {
+        headers: { 'Content-Type': 'application/json' },
+      });
+      setServerMessage(
+        'Message sent successfully. I will get back to you soon.',
+      );
+      reset();
+    } catch (error) {
+      const err = error as { response?: { data?: any } };
+      const msg =
+        err?.response?.data?.message ||
+        'Failed to send message. Please try again.';
+      setServerError(msg);
+    }
   }
 
   return (
@@ -140,7 +161,11 @@ export default function ContactForm() {
         </div>
 
         <div className="col-span-3 row-span-3 flex flex-col max-md:col-span-full">
-          <div className="mb-3 h-[1rem] text-sm opacity-0"></div>
+          <div
+            className={`mb-3 h-[1rem] text-xs ${serverError ? 'text-red-500 opacity-100' : serverMessage ? 'text-green-700 opacity-100' : 'opacity-0'}`}
+          >
+            {serverError || serverMessage}
+          </div>
           <button
             type="submit"
             disabled={isSubmitting}
@@ -151,7 +176,7 @@ export default function ContactForm() {
               <br />I will never spam you.
             </div>
             <div className="text-[44px] leading-tight font-semibold">
-              Let’s Talk
+              {isSubmitting ? 'Sending…' : 'Let’s Talk'}
             </div>
             <LuSend className="absolute right-6 h-10 w-10" strokeWidth={1} />
           </button>
