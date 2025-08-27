@@ -6,7 +6,6 @@ import MobileMenu from '@/app/components/MobileMenu';
 const navLinks = [
   { name: 'Resume', href: '/resume.pdf' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
   { name: 'Projects', href: '/projects' },
   { name: 'Deliverables', href: '/deliverables' },
   { name: 'Contact me', href: '/contact' },
