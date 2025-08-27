@@ -8,14 +8,17 @@ const nunito = Nunito({
   display: 'swap',
 });
 
+// Single source of truth for site description
+const siteDescription =
+  'Shivansh Karan is a Bangalore-based Full Stack Developer and Software Engineer with expertise in Next.js, React, Node.js, and Python. Experienced in building scalable web apps, DevOps automation, and cloud infrastructure, Shivansh creates high-performance solutions for startups and enterprises.';
+
 export const metadata: Metadata = {
   title: {
     default:
       'Shivansh Karan - Full Stack Developer & Software Engineer | Bangalore',
     template: '%s | Shivansh Karan Portfolio',
   },
-  description:
-    'Shivansh Karan is a Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies. View portfolio of web apps, Chrome extensions, and scalable systems.',
+  description: siteDescription,
   keywords: [
     'Shivansh Karan',
     'SpaceTesla',
@@ -52,8 +55,7 @@ export const metadata: Metadata = {
     url: 'https://shivanshkaran.tech',
     title:
       'Shivansh Karan - Full Stack Developer & Software Engineer | Bangalore',
-    description:
-      'Shivansh Karan is a Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies.',
+    description: siteDescription,
     siteName: 'Shivansh Karan Portfolio',
     images: [
       {
@@ -68,8 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title:
       'Shivansh Karan - Full Stack Developer & Software Engineer | Bangalore',
-    description:
-      'Shivansh Karan is a Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies.',
+    description: siteDescription,
     images: ['/avatar.png'],
     creator: '@shivanshkaran',
   },
