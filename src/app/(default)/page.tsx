@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <main className="w-full">
       <div className="bg-primary fixed top-0 left-0 h-[2px] w-full origin-left scale-x-0"></div>
-      <div className="grid h-screen grid-cols-12 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible">
+      <div className="grid h-screen grid-cols-1 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible lg:grid-cols-12">
         {/* Navbar Section */}
         <div className="col-span-full row-span-1">
           <Navbar />
         </div>
 
         {/* Main Content Grid */}
-        <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+        <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 lg:grid-cols-subgrid">
           {/* Intro Section */}
           <div className="col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full">
             <div className="bg-primary relative min-h-full overflow-hidden rounded-[20px] p-6 max-lg:min-h-[20rem]">
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
 
         {/* Right Side Content */}
-        <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+        <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 lg:grid-cols-subgrid">
           {/* Deliverables Section */}
           <div className="col-span-4 row-span-8 max-lg:col-span-full max-lg:min-h-[25rem]">
             <div className="bg-primary hide-scrollbar relative flex h-full flex-col overflow-y-auto rounded-[20px] p-6">

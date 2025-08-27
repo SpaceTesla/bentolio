@@ -26,14 +26,14 @@ export default function About() {
   return (
     <main className="w-full">
       <div className="bg-primary fixed top-0 left-0 h-[2px] w-full origin-left scale-x-0"></div>
-      <div className="grid h-screen grid-cols-12 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible">
+      <div className="grid h-screen grid-cols-1 grid-rows-10 gap-4 overflow-hidden p-4 max-lg:h-auto max-lg:grid-rows-none max-lg:overflow-visible lg:grid-cols-12">
         {/* Navbar Section */}
         <div className="col-span-full row-span-1">
           <Navbar />
         </div>
 
         {/* Main Content Grid */}
-        <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+        <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 lg:grid-cols-subgrid">
           {/* Personal Info Section */}
           <div className="max-xs:h-[28rem] col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full max-md:flex max-md:h-[12rem] max-sm:h-[26rem]">
             <div className="bg-primary hide-scrollbar relative h-full w-full overflow-y-auto rounded-[20px] p-8">
@@ -143,7 +143,7 @@ export default function About() {
         </div>
 
         {/* Right Side Content */}
-        <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+        <div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 lg:grid-cols-subgrid">
           {/* Experience Section */}
           <div className="col-span-4 row-span-7 max-lg:col-span-full max-lg:min-h-[18rem]">
             <div className="bg-primary hide-scrollbar relative h-full overflow-y-auto rounded-[20px] p-6">
