@@ -122,7 +122,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: 't5lF5iSG9toX75Ozj7irxnkFDiSn31XGeuLPVviQ1rM',
   },
   manifest: '/manifest.json',
 };
