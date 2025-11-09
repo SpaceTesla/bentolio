@@ -225,7 +225,7 @@ npm start
 
 ## 🔗 Important Links
 
-- **Portfolio**: [shivanshkaran.tech](https://shivanshkaran.tech)
+- **Portfolio**: [shivanshkaran.dev](https://shivanshkaran.dev)
 - **GitHub**: [github.com/shivanshkaran](https://github.com/shivanshkaran)
 - **LinkedIn**: [linkedin.com/in/shivanshkaran](https://linkedin.com/in/shivanshkaran)
 - **Services**: [anthrapi.com](https://anthrapi.com)

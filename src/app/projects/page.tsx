@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: 'Projects - Full Stack Developer Portfolio',
     description:
       "Explore Shivansh Karan's portfolio of web applications, Chrome extensions, and scalable systems.",
-    url: 'https://shivanshkaran.tech/projects',
+    url: 'https://shivanshkaran.dev/projects',
   },
 };
 

@@ -14,13 +14,13 @@ export default function ContactClient() {
     name: 'Contact Shivansh Karan',
     description:
       'Contact page for Shivansh Karan, Full Stack Developer and Software Engineer',
-    url: 'https://shivanshkaran.tech/contact',
+    url: 'https://shivanshkaran.dev/contact',
     mainEntity: {
       '@type': 'Person',
       name: 'Shivansh Karan',
       jobTitle: 'Full Stack Developer',
       description: 'Bangalore-based Full Stack Developer and Software Engineer',
-      url: 'https://shivanshkaran.tech',
+      url: 'https://shivanshkaran.dev',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Bangalore',

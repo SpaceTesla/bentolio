@@ -15,8 +15,8 @@ export default function Home() {
     jobTitle: 'Full Stack Developer',
     description:
       'Bangalore-based full stack developer and designer, known for crafting clean, functional, and visually engaging web experiences',
-    url: 'https://shivanshkaran.tech',
-    image: 'https://shivanshkaran.tech/myself.jpg',
+    url: 'https://shivanshkaran.dev',
+    image: 'https://shivanshkaran.dev/myself.jpg',
     sameAs: [
       'https://github.com/shivanshkaran',
       'https://linkedin.com/in/shivanshkaran',

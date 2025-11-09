@@ -22,7 +22,7 @@ export default function ProjectsClient() {
     name: 'Software Development Projects Portfolio',
     description:
       'Collection of web applications, Chrome extensions, and scalable systems developed by Shivansh Karan',
-    url: 'https://shivanshkaran.tech/projects',
+    url: 'https://shivanshkaran.dev/projects',
     itemListElement: projects.map((project, index) => ({
       '@type': 'SoftwareApplication',
       position: index + 1,

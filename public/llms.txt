@@ -1,4 +1,4 @@
-# LLMs.txt for shivanshkaran.tech
+# LLMs.txt for shivanshkaran.dev
 
 ## Website Overview
 This is the personal portfolio website of Shivansh Karan, a Full Stack Developer and Software Engineer based in Bangalore, India. The website showcases professional experience, projects, skills, and contact information.
@@ -71,7 +71,7 @@ This is the personal portfolio website of Shivansh Karan, a Full Stack Developer
 - **Skills/Experience**: Updated quarterly
 
 ## Contact Information
-- **Portfolio**: https://shivanshkaran.tech
+- **Portfolio**: https://shivanshkaran.dev
 - **GitHub**: https://github.com/shivanshkaran
 - **LinkedIn**: https://linkedin.com/in/shivanshkaran
 - **Twitter**: https://twitter.com/shivanshkaran

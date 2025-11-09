@@ -43,7 +43,7 @@ export default function DeliverablesClient() {
     name: 'Client Deliverables Portfolio',
     description:
       'Collection of client deliverables and freelance projects completed by Shivansh Karan',
-    url: 'https://shivanshkaran.tech/deliverables',
+    url: 'https://shivanshkaran.dev/deliverables',
     itemListElement: deliverables.map((deliverable, index) => ({
       '@type': 'Service',
       position: index + 1,

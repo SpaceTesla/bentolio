@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'About Me - Full Stack Developer & Software Engineer',
     description:
       'Learn about Shivansh Karan, a Bangalore-based Full Stack Developer with 5+ years of coding experience, 2+ years of design experience, and 4x Hackathon winner.',
-    url: 'https://shivanshkaran.tech/about',
+    url: 'https://shivanshkaran.dev/about',
   },
 };
 
@@ -56,8 +56,8 @@ export default function About() {
     jobTitle: 'Full Stack Developer',
     description:
       'Bangalore-based full stack developer with 5+ years of coding experience and 2+ years of design experience',
-    url: 'https://shivanshkaran.tech/about',
-    image: 'https://shivanshkaran.tech/myself.jpg',
+    url: 'https://shivanshkaran.dev/about',
+    image: 'https://shivanshkaran.dev/myself.jpg',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Bangalore',

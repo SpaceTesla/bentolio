@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Deliverables - Client Work & Freelance Projects',
     description:
       "View Shivansh Karan's client deliverables and freelance work. Professional web development projects and client testimonials.",
-    url: 'https://shivanshkaran.tech/deliverables',
+    url: 'https://shivanshkaran.dev/deliverables',
   },
 };
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Contact - Full Stack Developer & Software Engineer',
     description:
       'Get in touch with Shivansh Karan, a Bangalore-based Full Stack Developer and Software Engineer.',
-    url: 'https://shivanshkaran.tech/contact',
+    url: 'https://shivanshkaran.dev/contact',
   },
 };
 

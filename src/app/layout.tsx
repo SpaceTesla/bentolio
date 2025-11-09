@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://shivanshkaran.tech'),
+  metadataBase: new URL('https://shivanshkaran.dev'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://shivanshkaran.tech',
+    url: 'https://shivanshkaran.dev',
     title:
       'Shivansh Karan - Full Stack Developer & Software Engineer | Bangalore',
     description: siteDescription,
@@ -126,7 +126,7 @@ export default function RootLayout({
               '@type': 'Person',
               name: 'Shivansh Karan',
               jobTitle: 'Full Stack Developer',
-              url: 'https://shivanshkaran.tech',
+              url: 'https://shivanshkaran.dev',
               description:
                 'Bangalore-based Full Stack Developer, Software Engineer, and DevOps Engineer specializing in Next.js, React, Python, and cloud technologies.',
               sameAs: [
