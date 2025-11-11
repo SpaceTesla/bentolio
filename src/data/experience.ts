@@ -2,12 +2,20 @@ import { Experience } from '@/types/experience';
 
 export const experienceData: Experience[] = [
   {
-    title: 'Chief Technology Officer',
+    title: 'AI Full Stack Developer',
+    company: 'Anthroholic',
+    startDate: 'Oct 25',
+    endDate: 'Nov 25',
+    description:
+      'Revamped the platform’s AI engine into an intelligent, structured evaluation system, led team development, and shipped major full-stack features to boost performance and user experience.',
+  },
+  {
+    title: 'Head of Technology',
     company: 'Anthrapi',
     startDate: 'Jul 25',
-    endDate: 'Present',
+    endDate: 'Sep 25',
     description:
-      'Leading the tech strategy, architecture, and execution for client and in-house projects. Driving innovation, mentoring the dev team, and ensuring seamless integration of cutting-edge solutions.',
+      'Led the tech strategy, architecture, and execution for client and in-house projects. Mentored the dev team, and ensured seamless integration of cutting-edge solutions.',
   },
   {
     title: 'Full Stack Developer',
